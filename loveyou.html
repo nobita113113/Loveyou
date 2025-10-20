@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tũn 💖 Quỳnh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ffd6e8, #ffe3f0, #fff0f6);
+      overflow: hidden;
+      font-family: "Comic Sans MS", cursive;
+      
+    }
+    
+.top-text {
+  font-size: 2rem;
+  color: #ff5c8d;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 128, 171, 0.6);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* 💌 Nút bức thư góc phải */
+.letter-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 2.8rem;
+  cursor: pointer;
+  background: #ff9eb5;
+  border-radius: 50%;
+  padding: 10px 15px;
+  box-shadow: 0 0 15px rgba(255, 120, 150, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.letter-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 💖 Hộp thư ẩn */
+.letter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 240, 245, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* 📜 Nội dung bên trong thư */
+.letter-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  color: #ff6699;
+  box-shadow: 0 0 25px rgba(255, 150, 180, 0.4);
+  transform: scale(0);
+  animation: openLetter 0.7s forwards;
+}
+
+.letter-content h3 {
+  margin-bottom: 15px;
+}
+
+.letter-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ff80a8;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.letter-content button:hover {
+  background-color: #ff5c8d;
+}
+
+/* ✨ Hiệu ứng */
+@keyframes openLetter {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 3rem;
+      text-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    /* === Nút phát nhạc dễ thương === */
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ff8fab;
+      color: white;
+      border: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+      transition: 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #music-btn:hover {
+      background-color: #ffb3c6;
+      transform: scale(1.1);
+    }
+
+    #music-btn::after {
+      content: "🎶";
+      position: absolute;
+      top: -15px;
+      right: -10px;
+      font-size: 1.2rem;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    /* 💗 ẢNH Ở GIỮA TRANG 💗 */
+ .heart-bg {
+      position: relative;
+      width: 100%;
+      height: 50vh; /* ✅ chỉ chiếm 50% chiều cao màn hình */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: floatHeart 6s ease-in-out infinite;
+    }
+
+    .heart-bg img {
+      width: auto;
+      height: 100%; /* ✅ tự co theo chiều cao */
+      border-radius: 25px;
+      border: 6px solid rgba(255, 182, 193, 0.7);
+      box-shadow: 0 0 35px rgba(255, 150, 180, 0.4);
+      transition: transform 1.5s ease;
+    }
+
+    .heart-bg img:hover {
+      transform: scale(1.03);
+    }
+
+
+@keyframes floatHeart {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowText {
+  0%,100% { text-shadow: 0 0 10px #fff, 2px 2px 8px #ff99b9; }
+  50% { text-shadow: 0 0 25px #fff, 3px 3px 15px #ff4d6d; }
+}
+
+  </style>
+</head>
+<body>
+ <h2 class="top-text">Chúc mừng ngày Phụ nữ Việt Nam 20/10 💐</h2>   
+<!-- 💞 ẢNH TRÁI TIM Ở GIỮA NỀN 💞 -->
+<div class="heart-bg">
+  <img src="img/Tunquynh.png" alt="Love image">
+</div>
+
+<h1 class="love-text">Tũn 💖 Quỳnh</h1>
+<!-- 💌 Nút bức thư -->
+<div class="letter-icon" onclick="openLetter()">💌</div>
+
+<!-- 💖 Hộp thư bật lên -->
+<div class="letter" id="letter">
+  <div class="letter-content">
+    <h3>Gửi Quỳnh - em bé iuuu 💖</h3>
+    <p>
+      Chúc em 20/10 thật vui vẻ, xinh đẹp 💋<br>
+      Cảm ơn vì đã ở bên Anh 💕   <br>
+      Mong mỗi ngày trôi qua đều sẽ một ngày hạnh phúc, ngọt ngào dành cho hai chúng ta  💒
+    </p>
+    <button onclick="closeLetter()">Đóng thư</button>
+  </div>
+</div>
+
+  <audio id="bg-audio" src="AnhLaCuaEm-Karik.mp3" autoplay loop></audio>
+  <button id="music-btn" onclick="toggleMusic()">⏸</button>
+
+  <script>
+  const audio = document.getElementById('bg-audio');
+  const button = document.getElementById('music-btn');
+  let started = false;
+
+  function toggleMusic() {
+    if (!started) {
+      audio.play();
+      started = true;
+    }
+
+    if (audio.paused) {
+      audio.play();
+      button.textContent = "⏸";
+    } else {
+      audio.pause();
+      button.textContent = "▶️";
+    }
+  }
+
+  // Tự động cho phép phát khi người dùng click lần đầu ở bất kỳ đâu
+  document.body.addEventListener('click', () => {
+    if (!started) {
+      audio.play().catch(() => {}); // tránh lỗi log
+      started = true;
+    }
+  });
+
+  // Tim bay ngẫu nhiên
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = '💖';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+    heart.style.animationDuration = (Math.random() * 4 + 4) + 's';
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+  }
+
+  setInterval(createHeart, 400);
+</script>
+
+<script>
+  function openLetter() {
+    document.getElementById("letter").style.display = "flex";
+  }
+
+  function closeLetter() {
+    document.getElementById("letter").style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>
